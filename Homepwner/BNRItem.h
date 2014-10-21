@@ -10,9 +10,6 @@
 
 @interface BNRItem : NSObject
 
-@property (nonatomic, strong) BNRItem *containedItem;
-@property (nonatomic, weak) BNRItem *container;
-
 @property (nonatomic, copy) NSString *itemName;
 @property (nonatomic, copy) NSString *serialName;
 @property (nonatomic) int valueInDollars;
@@ -25,9 +22,6 @@
 -(instancetype)initWithItemName:(NSString *)name valueinDollars:(int)value serialName:(NSString *)sNumber;
 
 -(instancetype)initWithItemName:(NSString *)name;
-
--(void)setContainedItem:(BNRItem *)item;
--(BNRItem *)containedItem;
 
 -(void)setContainer:(BNRItem *)item;
 -(BNRItem *)container;

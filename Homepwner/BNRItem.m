@@ -71,11 +71,6 @@
     return newItem;
 }
 
--(void)setContainedItem:(BNRItem *)containedItem {
-    _containedItem = containedItem;
-    self.containedItem.container = self;  w
-}
-
 
 -(void)dealloc
 {
