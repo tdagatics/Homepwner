@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  BNRItemsViewControllerTableViewController.h
 //  Homepwner
 //
 //  Created by Anthony Dagati on 10/21/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface BNRItemsViewControllerTableViewController : UITableViewController
 
 @end
-
