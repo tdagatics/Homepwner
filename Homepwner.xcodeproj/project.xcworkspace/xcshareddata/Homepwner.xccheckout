@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B872DCB2-0BF6-4AC4-B6F6-517EC280E054</string>
+	<string>8F33F8AA-0C00-476E-AEC1-E9A417BA03D7</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Homepwner</string>
+	<string>HomePwner</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>6D90C23B4BFE52287359105A1E78F79FB7D1EF38</key>
 		<string>https://github.com/tdagatics/Homepwner.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Homepwner.xcodeproj</string>
+	<string>HomePwner.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6D90C23B4BFE52287359105A1E78F79FB7D1EF38</key>

@@ -1,9 +1,9 @@
 //
 //  BNRItemStore.h
-//  Homepwner
+//  HomePwner
 //
-//  Created by Anthony Dagati on 10/22/14.
-//  Copyright (c) 2014 Black Rail Capital. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,11 +12,10 @@
 
 @interface BNRItemStore : NSObject
 
-// Class method, prefix with a +
-@property (nonatomic, readonly, copy) NSArray *allItems;
+@property (nonatomic, readonly) NSArray *allItems;
 
-+(instancetype)sharedStore;
--(BNRItem *)createItem;
-
+// Notice that this is a class method and prefixed with a + instead of a -
++ (instancetype)sharedStore;
+- (BNRItem *)createItem;
 
 @end

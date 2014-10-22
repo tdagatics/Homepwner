@@ -1,9 +1,9 @@
 //
 //  BNRItemStore.m
-//  Homepwner
+//  HomePwner
 //
-//  Created by Anthony Dagati on 10/22/14.
-//  Copyright (c) 2014 Black Rail Capital. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import "BNRItemStore.h"
@@ -17,33 +17,30 @@
 
 @implementation BNRItemStore
 
-+(instancetype)sharedStore
++ (instancetype)sharedStore
 {
     static BNRItemStore *sharedStore;
-    
-    // Do I need to create a shared store?
+
+    // Do I need to create a sharedStore?
     if (!sharedStore) {
-        sharedStore = [[self alloc] initWithPrivate];
+        sharedStore = [[self alloc] initPrivate];
     }
+
     return sharedStore;
 }
 
-// If a programmer calls [[BNRItemStore alloc] init], throw an error
--(instancetype)init
+// If a programmer calls [[BNRItemStore alloc] init], let him
+// know the error of his ways
+- (instancetype)init
 {
-    [NSException raise:@"Singleton" format:@"Use+[BNR ItemStore sharedStore]"];
+    @throw [NSException exceptionWithName:@"Singleton"
+                                   reason:@"Use +[BNRItemStore sharedStore]"
+                                 userInfo:nil];
     return nil;
 }
 
-//Private initializer
--(instancetype)initWithPrivate
-{
-    self = [super init];
-    
-    return self;
-}
-
--(instancetype)initPrivate
+// Here is the real (secret) initializer
+- (instancetype)initPrivate
 {
     self = [super init];
     if (self) {
@@ -52,15 +49,17 @@
     return self;
 }
 
--(NSArray *)allItems
+- (NSArray *)allItems
 {
     return [self.privateItems copy];
 }
 
--(BNRItem *)createItem
+- (BNRItem *)createItem
 {
     BNRItem *item = [BNRItem randomItem];
+
     [self.privateItems addObject:item];
+
     return item;
 }
 

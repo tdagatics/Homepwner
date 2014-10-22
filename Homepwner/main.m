@@ -1,16 +1,18 @@
 //
 //  main.m
-//  Homepwner
+//  HomePwner
 //
-//  Created by Anthony Dagati on 10/21/14.
-//  Copyright (c) 2014 Black Rail Capital. All rights reserved.
+//  Created by John Gallagher on 1/7/14.
+//  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "AppDelegate.h"
 
-int main(int argc, char * argv[]) {
+#import "BNRAppDelegate.h"
+
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([BNRAppDelegate class]));
     }
 }
