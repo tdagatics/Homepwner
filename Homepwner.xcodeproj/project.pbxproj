@@ -14,6 +14,7 @@
 		436FD69F19F7010300BF8700 /* BNRItemsViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 436FD69E19F7010300BF8700 /* BNRItemsViewControllerTableViewController.m */; };
 		436FD6A119F7020000BF8700 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 436FD6A019F7020000BF8700 /* Default-568h@2x.png */; };
 		436FD6A419F7026600BF8700 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 436FD6A319F7026600BF8700 /* BNRItem.m */; };
+		43915E8F19F807F100542647 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 43915E8E19F807F100542647 /* BNRItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,8 @@
 		436FD6A019F7020000BF8700 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		436FD6A219F7026600BF8700 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		436FD6A319F7026600BF8700 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		43915E8D19F807F100542647 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		43915E8E19F807F100542647 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				436FD69E19F7010300BF8700 /* BNRItemsViewControllerTableViewController.m */,
 				436FD67619F6FCFE00BF8700 /* AppDelegate.h */,
 				436FD67719F6FCFE00BF8700 /* AppDelegate.m */,
+				43915E8D19F807F100542647 /* BNRItemStore.h */,
+				43915E8E19F807F100542647 /* BNRItemStore.m */,
 				436FD67F19F6FCFE00BF8700 /* Images.xcassets */,
 				436FD67219F6FCFE00BF8700 /* Supporting Files */,
 			);
@@ -220,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43915E8F19F807F100542647 /* BNRItemStore.m in Sources */,
 				436FD67819F6FCFE00BF8700 /* AppDelegate.m in Sources */,
 				436FD6A419F7026600BF8700 /* BNRItem.m in Sources */,
 				436FD67519F6FCFE00BF8700 /* main.m in Sources */,
@@ -395,6 +401,7 @@
 				436FD69419F6FCFE00BF8700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		436FD69519F6FCFE00BF8700 /* Build configuration list for PBXNativeTarget "HomepwnerTests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +410,7 @@
 				436FD69719F6FCFE00BF8700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
