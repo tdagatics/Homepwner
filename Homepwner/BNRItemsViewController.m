@@ -23,11 +23,7 @@
     // Call the superclass's designated initializer
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[BNRItemStore sharedStore] createItem];
-        }
     }
-    NSLog(@"sizeof(NSInteger) = %@", @(sizeof(NSInteger)));
     return self;
 }
 
@@ -68,8 +64,11 @@
 
 -(IBAction)addNewItem:(id)sender
 {
-    // Make a new index path for the 0th section, last row
-    NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
+    // Create a new item and add it to the store
+    BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
+    
+    // Figure out where the item is in the array
+    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
     
     // Inser this new row into the table
@@ -107,6 +106,24 @@
     }
     
     return _headerView;
+}
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // If the table view is asking to commit a delete command..
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items = [[BNRItemStore sharedStore] allItems];
+        BNRItem *item = items[indexPath.row];
+        [[BNRItemStore sharedStore] removeItem:item];
+        
+        // Also remove that row from the table view with an ainimation
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
 }
 
 @end
