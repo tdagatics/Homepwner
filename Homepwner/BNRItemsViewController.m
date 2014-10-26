@@ -10,6 +10,12 @@
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 
+@interface BNRItemsViewController ()
+
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+
+@end
+
 @implementation BNRItemsViewController
 
 - (instancetype)init
@@ -57,4 +63,13 @@
     return cell;
 }
 
+-(IBAction)addNewItem:(id)sender
+{
+    
+}
+
+-(IBAction)toggleEditingMode:(id)sender
+{
+    
+}
 @end

@@ -19,7 +19,7 @@
 
 + (instancetype)sharedStore
 {
-    static BNRItemStore *sharedStore;
+    static BNRItemStore *sharedStore; /* local in scope, not being stored on stack frame so not getting blown away */
 
     // Do I need to create a sharedStore?
     if (!sharedStore) {
